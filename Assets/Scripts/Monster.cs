@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,8 +7,6 @@ public class Monster : MonoBehaviour
 {
     public MonsterSettings Settings;
     private float _health;
-    private float _damage;
-    private float _speed;
 
     private bool _startAttack = false;
 
@@ -15,23 +14,20 @@ public class Monster : MonoBehaviour
     private int _pointID = 0;
     
     Transform _transform;
-    private void Awake() {
-       _health = Settings.Health;
-       _speed = Settings.Speed;
-       _damage = Settings.Damage;
-    }
     private void Start()
     {
-        _points = GetPoints._GetPoints;
+        _health = Settings.Health;
+        _points = GetGameController._GetGameController._GetPoints;
         _transform = GetComponent<Transform>();
     }
     private void FixedUpdate() {
-        Move();
+        if(!_startAttack)
+            Move();
     }
     private void Move(){
         if(_pointID < _points.Length)
         {
-            _transform.Translate((_points[_pointID].position - _transform.position).normalized * Time.fixedDeltaTime * _speed);
+            _transform.Translate((_points[_pointID].position - _transform.position).normalized * Time.fixedDeltaTime * Settings.Speed);
             
             if(_points[_pointID].position.x - _transform.position.x < 1 && _points[_pointID].position.y - _transform.position.y < 1)
                 _pointID++;
@@ -45,8 +41,19 @@ public class Monster : MonoBehaviour
 
     private IEnumerator Attack(){
         while(_startAttack){
-            GetGameController._GetGameController.ApplyDamage = _damage;
+            GetGameController._GetGameController.ApplyDamage = Settings.Damage;
             yield return new WaitForSeconds(1);
         }
+    }
+    private void Death(){
+        StopCoroutine(Attack());
+        GetGameController._GetGameController.Balance += Settings.MoneyForKill;
+        GetGameController._GetGameController.UpdateUI();
+        Destroy(gameObject);
+    }
+    public void ApplyDamage(float damage){
+        _health -= damage;
+        if(_health <= 0)
+            Death();
     }
 }

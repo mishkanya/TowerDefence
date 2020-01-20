@@ -8,4 +8,7 @@ public class MonsterSettings : ScriptableObject
     public float Health;
     public float Speed;
     public float Damage;
+    public int MoneyForKill;
+    
+    public Sprite Sprite;
 }

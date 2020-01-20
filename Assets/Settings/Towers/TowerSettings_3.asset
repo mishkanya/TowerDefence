@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52a7c6d39f354ed439b623859a1b4215, type: 3}
+  m_Name: TowerSettings_3
+  m_EditorClassIdentifier: 
+  AttackDistance: 9999
+  ShootInterval: 0.3
+  Damage: 50
+  Price: 1000
+  Sprite: {fileID: -2545511984063369323, guid: 61bef0a057905954a8092aa0964eb149, type: 3}
+  Bullet: {fileID: 1931016870353638697, guid: ad21a62510e238b47b0cf789a39c7442, type: 3}
+  MoneyForSell: 0

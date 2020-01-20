@@ -7,8 +7,8 @@ using UnityEngine;
 public class GameSettings : ScriptableObject
 {
     public int Tides;
-    public float TimeForTide;
-
+    public int TimeForTide;
+    public float PauseTime;
     public float Health;
     public int StartMoney;
     

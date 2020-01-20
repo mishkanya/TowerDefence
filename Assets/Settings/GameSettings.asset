@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73dded4eab9e1e1478a2c4d47e00e787, type: 3}
   m_Name: GameSettings
   m_EditorClassIdentifier: 
-  Tides: 5
-  TimeForTide: 2
-  Health: 100
-  StartMoney: 250
+  Tides: 3
+  TimeForTide: 3
+  PauseTime: 3
+  Health: 20000
+  StartMoney: 500

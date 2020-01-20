@@ -44,15 +44,23 @@
     <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
-  <ItemGroup>     <Compile Include="Assets\Scripts\ButtonScripts.cs" />
+  <ItemGroup>     <Compile Include="Assets\Scripts\Bullet.cs" />
+     <Compile Include="Assets\Scripts\ButtonScripts.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Monster.cs" />
      <Compile Include="Assets\Scripts\PointCointenier.cs" />
+     <Compile Include="Assets\Scripts\ReloadScene.cs" />
      <Compile Include="Assets\Scripts\Scriptable obj\GameSettings.cs" />
      <Compile Include="Assets\Scripts\Scriptable obj\MonsterSettings.cs" />
      <Compile Include="Assets\Scripts\Scriptable obj\TowerSettings.cs" />
+     <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\Static classes\GetGameController.cs" />
      <Compile Include="Assets\Scripts\Static classes\GetPoints.cs" />
+     <Compile Include="Assets\Scripts\TowerScripts\BuildTower.cs" />
+     <Compile Include="Assets\Scripts\TowerScripts\TowerInfo.cs" />
+     <Compile Include="Assets\Scripts\TowerScripts\TowerPlace.cs" />
+     <Compile Include="Assets\Scripts\TowerScripts\TowerShoot.cs" />
+     <Compile Include="Assets\Scripts\TowerScripts\TowersMenu.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

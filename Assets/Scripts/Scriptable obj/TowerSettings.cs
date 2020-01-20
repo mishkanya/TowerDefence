@@ -9,4 +9,7 @@ public class TowerSettings : ScriptableObject
     public float Shoot‌Interval‌;
     public float Damage;
     public int Price;
+    public Sprite Sprite;
+    public GameObject Bullet;
+    public int MoneyForSell;
 }
